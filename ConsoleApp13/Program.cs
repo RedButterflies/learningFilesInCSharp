@@ -31,15 +31,10 @@ class Program
                 fs.WriteLine(str);
             }
         }
-        
-        using (StreamReader sr = File.OpenText(path))
-        {
-            string s;
-            while((s = sr.ReadLine()) != null)
-            {
-                Console.WriteLine(s);
-               
-            }
-        }
+
+        string text = File.ReadAllText(path);
+        Console.WriteLine(text);
+
+
     }
 }
